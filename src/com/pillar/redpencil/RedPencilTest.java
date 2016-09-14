@@ -32,4 +32,15 @@ public class RedPencilTest {
 		assertTrue(promoRedpencil.isActivated(.05, .31, 9.5, 10.0));
 	}
 
+	/*
+	 * Testing if sale is activated by price
+	 * at most 30% reduction
+	 */
+	@Test
+	public void test3() {
+		Redpencil promoRedpencil = new Redpencil();
+
+		assertTrue(promoRedpencil.isActivated(.05, .31, 6.9, 10.0));
+	}
+
 }
