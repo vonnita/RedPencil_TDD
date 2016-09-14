@@ -18,7 +18,7 @@ public class RedPencilTest {
 	public void test() {
 		Redpencil promoRedpencil = new Redpencil();
 
-		assertFalse(promoRedpencil.isActivated(.05, .31, 10.0, 10.0));
+		assertFalse(promoRedpencil.isActivated(.05, .31, 10.0, 10.0,30));
 	}
 
 	/*
@@ -29,7 +29,7 @@ public class RedPencilTest {
 	public void test2() {
 		Redpencil promoRedpencil = new Redpencil();
 
-		assertTrue(promoRedpencil.isActivated(.05, .31, 9.5, 10.0));
+		assertTrue(promoRedpencil.isActivated(.05, .31, 9.5, 10.0,30));
 	}
 
 	/*
@@ -40,7 +40,21 @@ public class RedPencilTest {
 	public void test3() {
 		Redpencil promoRedpencil = new Redpencil();
 
-		assertTrue(promoRedpencil.isActivated(.05, .31, 6.9, 10.0));
+		assertTrue(promoRedpencil.isActivated(.05, .31, 6.9, 10.0,30));
 	}
 
+	/*
+	 * Testing if the original price 
+	 * was stable/stayed the original 
+	 * price for at least 30days
+	 * 
+	 */
+	@Test
+	public void test4() {
+		Redpencil promoRedpencil = new Redpencil();
+
+		assertTrue(promoRedpencil.isActivated(.05, .31, 6.9, 10.0, 30));
+	}
+
+	
 }
